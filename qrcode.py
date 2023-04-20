@@ -22,7 +22,7 @@ def setScreensize(window, res):
     window.geometry("+{}+{}".format(x_pos, y_pos))
 
 def generateQRCode(url):
-    if len(url.get()) < 0:
+    if len(url.get()) <= 0:
         messagebox.showerror(title="Error", message="Please input a valid URL")
     else:
         url = url.get()
@@ -42,7 +42,7 @@ def generateQRCode(url):
 
 window = Tk()
 window.title("QR Code Generator")
-setScreensize(window, "400x700")
+setScreensize(window, "400x250")
 
 frame = Frame(window)
 frame.pack(expand=False, fill="both")
